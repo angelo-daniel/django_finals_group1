@@ -1,0 +1,90 @@
+{% extends 'event/base.html' %}
+
+{% block title %} OpportunIT: Welcome {% endblock %}
+
+{% block content %}
+
+{%  load static %}
+<div class="header h-[10vh] flex items-center justify-between px-4">
+    <!-- Logo div -->
+    <div class="w-1/3 px-2 h-full flex justify-center items-center mt-6">
+        <p class="">
+            <a href ="{% url 'event:arrival' %}">
+                <i class="fa-solid fa-handshake text-8xl text-blue-500"></i>
+            </a>
+        </p>
+    </div>
+
+    <!-- Second column (Buttons and UL) -->
+    <div class="w-2/3 px-2 h-full flex justify-center items-center ml-4"> <!-- Added ml-4 for left margin -->
+<!--        <ul class="flex">-->
+<!--            <li class="px-3 py-3 text-gray-600 text-xl mr-3 hover:text-black transition-all duration-200 text-center">-->
+<!--                <a href="#">-->
+<!--                    <i class="fa-solid fa-users"></i>-->
+<!--                    <div class="mt-2 text-sm">People</div> &lt;!&ndash; Text below icon &ndash;&gt;-->
+<!--                </a>-->
+<!--            </li>-->
+<!--            <li class="px-3 py-3 text-gray-600 text-xl mr-4 hover:text-black transition-all duration-200 text-center">-->
+<!--                <a href="#">-->
+<!--                    <i class="fa-solid fa-suitcase"></i>-->
+<!--                    <div class="mt-2 text-sm">Jobs</div> &lt;!&ndash; Text below icon &ndash;&gt;-->
+<!--                </a>-->
+<!--            </li>-->
+<!--        </ul>-->
+
+        <a href="{% url 'event:register' %}" class="block w-1/6">
+            <button class=" py-4 px-4 rounded-full text-md text-gray-600 hover:text-gray-800  hover:bg-gray-300 transition-all duration-300 w-5/6">Join Now</button>
+        </a>
+
+        <!-- Sign in button wrapped in <a> tag with href -->
+        <a href="{% url 'event:login' %}" class="block w-1/6">
+            <button class="border border-blue-800 py-4 px-4 rounded-full text-md text-blue-600 hover:text-blue-800 hover:border-blue-800 hover:bg-blue-50 transition-all duration-300 w-5/6">
+                Sign in
+            </button>
+        </a>
+    </div>
+
+
+</div>
+
+
+<div class="body h-[90vh] grid grid-cols-2 gap-4 justify-items-center items-center">
+    <!-- Text Section -->
+    <div class="col-span-1 flex justify-center items-center">
+        <div class="text-wrap text-center">
+            <p class=" text-gray-700 ">
+                <span class="block text-6xl">Welcome to OpportunIT,</span>
+                <span class="block mt-2 text-6xl">a professional community.</span>
+                <span class="block mt-5 text-xl">Here, you can find opportunities, or they can find you.</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- Image Section -->
+    <div class="col-span-1 flex justify-center items-center">
+        <img src="{% static 'event/images/pngwing.com.png' %}" alt="OpportunIT Image" class="max-w-[850px] max-h-[850px] object-contain"/>
+
+    </div>
+
+</div>
+
+<div class="footer flex flex-wrap relative  h-[5vh] justify-center items-center bg-yellow-50">
+
+    <div class=" ">
+        <ul class="flex">
+            <li class="text-sm">
+                OpportunIT © 2024
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+
+    if (window.history && window.history.pushState) {
+        window.history.pushState('forward', null, './');
+        window.history.forward();
+    }
+</script>
+
+{% endblock %}
