@@ -10,7 +10,7 @@
     <div class="w-1/3 px-2 h-full flex justify-center items-center mt-6">
         <p class="">
             <a href ="{% url 'event:arrival' %}">
-                <i class="fa-solid fa-handshake text-8xl text-blue-500"></i>
+                <img src="{% static 'event/images/logov2.png' %}" alt="" class="w-[18vw]">
             </a>
         </p>
     </div>
@@ -73,20 +73,27 @@
     <ul class="space-y-2">
         <li class="text-lg font-light mb-1">General</li>
         <a href="{% url 'event:login' %}" ><li class="font-light text-sm mb-1">Sign in</li></a>
-        <a href="{% url 'event:register' %}"><li class="font-light text-sm mb-1 ">Register</li></a>
-    </ul>
-    <!-- Second UL -->
-    <ul class="space-y-2">
-        <li class="text-lg font-light mb-1">Information</li>
-        <a href="#" ><li class="font-light text-sm mb-1">About</li></a>
-        <a href="#"><li class="font-light text-sm mb-1">Contact</li></a>
+        <a href="{% url 'event:register' %}"><li class="font-light text-sm mb-12 ">Register</li></a>
     </ul>
 
     <ul class="space-y-2">
         <li class="text-lg font-light mb-1">Explore</li>
         <a href="{% url 'event:register' %}" ><li class="font-light text-sm mb-1">Find Jobs</li></a>
-        <a href="{% url 'event:register' %}"><li class="font-light text-sm mb-1">Look for People</li></a>
+        <a href="{% url 'event:register' %}"><li class="font-light text-sm mb-12">Look for People</li></a>
     </ul>
+
+    <!-- Second UL -->
+    <ul class="space-y-2">
+        <li class="text-lg font-light mb-1">Information</li>
+        <a href="#" ><li class="font-light text-sm mb-1">About</li></a>
+        <a href="#"><li class="font-light text-sm mb-1">Contact</li></a>
+        <a href="#"><li class="font-light text-sm mb-1">Policies</li></a>
+        <a href="#"><li class="font-light text-sm mb-1">Terms and Conditions</li></a>
+
+
+    </ul>
+
+
     <!-- Third UL -->
 <!--    <ul class="space-y-2">-->
 <!--        <li>Item 7</li>-->

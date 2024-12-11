@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from .forms import LoginForm
 from .forms import CustomUserCreationForm
 from django.contrib.auth import logout
+from django.contrib import messages
 
 # Create your views here.
 
@@ -59,10 +60,11 @@ def register(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-            user = form.save()  # Save the new user
-            login(request, user)  # Log in the user immediately after registration
-            request.session['first_name'] = user.first_name  # Optional: store first name in session
-            return redirect('event:dashboard')  # Redirect to the dashboard after successful registration
+            user = form.save()
+            # login(request, user)
+            # messages.success(request, "Your account has been created!")
+            request.session['first_name'] = user.first_name
+            return redirect('event:login')
         else:
             error_message = "Please correct the errors below."
     else:

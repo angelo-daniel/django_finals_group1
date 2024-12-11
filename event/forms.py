@@ -30,7 +30,7 @@ class LoginForm(forms.Form):
 
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(
-        label="Email",
+        label="Email Address",
         required=True,
         widget=forms.EmailInput(
             attrs={
@@ -63,7 +63,7 @@ class CustomUserCreationForm(UserCreationForm):
         )
     )
     password2 = forms.CharField(
-        label="Password confirmation",
+        label=" Confirm",
         required=True,
         widget=forms.PasswordInput(
             attrs={

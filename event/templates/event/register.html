@@ -3,12 +3,13 @@
 {% block title %} OpportunIT SignIn | LogIn  {% endblock %}
 
 {% block content %}
-
+{% load static %}
+{% load crispy_forms_tags %}
 <div class="header h-[10vh] relative flex flex-wrap ">
     <div class="w-1/3 px-2 h-full flex justify-center items-center mt-2">
         <p class="">
             <a href ="{% url 'event:arrival' %}">
-                <i class="fa-solid fa-handshake text-8xl text-blue-500"></i>
+                <img src="{% static 'event/images/logov2.png' %}" alt="" class="w-[13vw]">
             </a>
         </p>
     </div>
