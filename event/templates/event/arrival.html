@@ -68,7 +68,35 @@
 
 </div>
 
-<div class="footer flex flex-wrap relative  h-[5vh] justify-center items-center bg-yellow-50">
+<div class="bg-blue-100 h-[20vh] flex justify-center items-center gap-10 ">
+    <!-- First UL -->
+    <ul class="space-y-2">
+        <li class="text-lg font-light mb-1">General</li>
+        <a href="{% url 'event:login' %}" ><li class="font-light text-sm mb-1">Sign in</li></a>
+        <a href="{% url 'event:register' %}"><li class="font-light text-sm mb-1 ">Register</li></a>
+    </ul>
+    <!-- Second UL -->
+    <ul class="space-y-2">
+        <li class="text-lg font-light mb-1">Information</li>
+        <a href="#" ><li class="font-light text-sm mb-1">About</li></a>
+        <a href="#"><li class="font-light text-sm mb-1">Contact</li></a>
+    </ul>
+
+    <ul class="space-y-2">
+        <li class="text-lg font-light mb-1">Explore</li>
+        <a href="{% url 'event:register' %}" ><li class="font-light text-sm mb-1">Find Jobs</li></a>
+        <a href="{% url 'event:register' %}"><li class="font-light text-sm mb-1">Look for People</li></a>
+    </ul>
+    <!-- Third UL -->
+<!--    <ul class="space-y-2">-->
+<!--        <li>Item 7</li>-->
+<!--        <li>Item 8</li>-->
+<!--        <li>Item 9</li>-->
+<!--    </ul>-->
+</div>
+
+
+<div class="footer flex flex-wrap relative  h-[5vh] justify-center items-center ">
 
     <div class=" ">
         <ul class="flex">
