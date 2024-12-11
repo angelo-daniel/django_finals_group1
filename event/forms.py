@@ -9,10 +9,11 @@ class LoginForm(forms.Form):
         required=True,
         widget=forms.TextInput(
             attrs={
-                'class': 'form-control shadow-sm rounded',
+                'class': 'form-control shadow-sm rounded font-light',
                 'placeholder': 'Enter your username',
                 'style': 'border: 1px solid #ced4da; padding: 10px;'
             }
+
         )
     )
     password = forms.CharField(
@@ -20,7 +21,7 @@ class LoginForm(forms.Form):
         required=True,
         widget=forms.PasswordInput(
             attrs={
-                'class': 'form-control shadow-sm rounded',
+                'class': 'form-control shadow-sm rounded font-light',
                 'placeholder': 'Enter your password',
                 'style': 'border: 1px solid #ced4da; padding: 10px;'
             }
@@ -33,7 +34,7 @@ class CustomUserCreationForm(UserCreationForm):
         required=True,
         widget=forms.EmailInput(
             attrs={
-                'class': 'form-control shadow-sm rounded',
+                'class': 'form-control shadow-sm rounded font-light',
                 'placeholder': 'Enter your email',
                 'style': 'border: 1px solid #ced4da; padding: 10px;'
             }
@@ -44,7 +45,7 @@ class CustomUserCreationForm(UserCreationForm):
         required=True,
         widget=forms.TextInput(
             attrs={
-                'class': 'form-control shadow-sm rounded',
+                'class': 'form-control shadow-sm rounded font-light',
                 'placeholder': 'Enter your username',
                 'style': 'border: 1px solid #ced4da; padding: 10px;'
             }
@@ -55,7 +56,7 @@ class CustomUserCreationForm(UserCreationForm):
         required=True,
         widget=forms.PasswordInput(
             attrs={
-                'class': 'form-control shadow-sm rounded',
+                'class': 'form-control shadow-sm rounded font-light',
                 'placeholder': 'Enter your password',
                 'style': 'border: 1px solid #ced4da; padding: 10px;'
             }
@@ -66,7 +67,7 @@ class CustomUserCreationForm(UserCreationForm):
         required=True,
         widget=forms.PasswordInput(
             attrs={
-                'class': 'form-control shadow-sm rounded',
+                'class': 'form-control shadow-sm rounded font-light',
                 'placeholder': 'Confirm your password',
                 'style': 'border: 1px solid #ced4da; padding: 10px;'
             }

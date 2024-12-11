@@ -15,7 +15,7 @@
 </div>
 
 <div class="body flex flex-wrap relative  h-[85vh] justify-center items-center">
-    <div class="border-2 border-black w-[80%] sm:w-[300px] md:w-[400px] h-[60%] sm:h-[400px] md:h-[500px] flex ">
+    <div class="border border-gray-300 shadow-lg w-[90%] sm:w-[300px] md:w-[400px] rounded-lg bg-white p-6">
         <div class="mt-2 w-96 flex flex-col">
             <p class="text-3xl px-3 py-2 font-bold">Sign in</p>
        <form method="post">
@@ -29,9 +29,11 @@
                {{ form.password }}
            </div>
            <div>
-
-
-               <button type="submit" class=" text-white bg-blue-600 font-medium py-4 px-2 w-4/6 ml-20 mt-5 rounded-full">Sign in</button>
+                 <button type="submit" class=" text-white bg-blue-600 font-medium py-4 px-2 w-[18vw] ml-0 mt-5  rounded-full">Sign in</button>
+                <p class="mt-5 ml-4 font-light">Don't have an account? <a href="{% url 'event:register'%}" class="text-blue-700 font-bold">
+                        Create An Account.
+                    </a>
+                </p>
            </div>
        </form>
 
@@ -45,7 +47,7 @@
 
 
 
-<div class="footer flex flex-wrap relative  h-[5vh] justify-center items-center">
+<div class="footer flex flex-wrap relative h-[5vh] justify-center items-center bg-gray-200">
 
     <div class=" ">
         <ul class="flex">
